@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@theme inline {
+  /* Brand Colors - Material Design 3 inspired */
+  --color-primary: #0052d1;
+  --color-primary-container: #156aff;
+  --color-primary-fixed: #dae1ff;
+  --color-primary-fixed-dim: #b3c5ff;
+  --color-on-primary: #ffffff;
+  --color-on-primary-fixed: #001849;
+  --color-on-primary-fixed-variant: #003fa4;
+  --color-on-primary-container: #fefcff;
+  --color-inverse-primary: #b3c5ff;
+
+  --color-secondary: #5c5f61;
+  --color-secondary-container: #e1e3e5;
+  --color-secondary-fixed: #e1e3e5;
+  --color-secondary-fixed-dim: #c5c7c9;
+  --color-on-secondary: #ffffff;
+  --color-on-secondary-fixed: #191c1e;
+  --color-on-secondary-fixed-variant: #444749;
+  --color-on-secondary-container: #626567;
+
+  --color-tertiary: #186a22;
+  --color-tertiary-container: #358438;
+  --color-tertiary-fixed: #a3f69c;
+  --color-tertiary-fixed-dim: #88d982;
+  --color-on-tertiary: #ffffff;
+  --color-on-tertiary-fixed: #002204;
+  --color-on-tertiary-fixed-variant: #005312;
+  --color-on-tertiary-container: #f7fff1;
+
+  --color-error: #ba1a1a;
+  --color-error-container: #ffdad6;
+  --color-on-error: #ffffff;
+  --color-on-error-container: #93000a;
+
+  --color-surface: #fcf9f8;
+  --color-surface-dim: #dcd9d9;
+  --color-surface-bright: #fcf9f8;
+  --color-surface-variant: #e5e2e1;
+  --color-surface-tint: #0054d6;
+  --color-surface-container: #f0edec;
+  --color-surface-container-low: #f6f3f2;
+  --color-surface-container-high: #ebe7e7;
+  --color-surface-container-highest: #e5e2e1;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-surface: #1c1b1b;
+  --color-on-surface-variant: #414755;
+  --color-inverse-surface: #313030;
+  --color-inverse-on-surface: #f3f0ef;
+
+  --color-outline: #717786;
+  --color-outline-variant: #c1c6d7;
+  --color-background: #fcf9f8;
+  --color-on-background: #1c1b1b;
+
+  /* Fonts */
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+  --font-label: "Inter", sans-serif;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Material Symbols */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+
+/* Custom utility classes */
+.glass-nav {
+  background: rgba(252, 249, 248, 0.8);
+  backdrop-filter: blur(24px);
+}
+
+.hero-gradient {
+  background: linear-gradient(135deg, #0052d1 0%, #156aff 100%);
+}
+
+.car-overhang {
+  filter: drop-shadow(0 25px 50px -12px rgba(0, 0, 0, 0.25));
+}
+
+.gradient-button {
+  background: linear-gradient(135deg, #0052d1 0%, #156aff 100%);
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* ── Dark Mode Variant (class-based) ── */
+@custom-variant dark (&:where(.dark, .dark *));
+
+.dark {
+  --color-background: #0D1117;
+  --color-on-background: #E6EDF3;
+  --color-surface: #0D1117;
+  --color-surface-dim: #0A0F16;
+  --color-surface-bright: #1C2128;
+  --color-surface-variant: #21262D;
+  --color-surface-tint: #00C2FF;
+  --color-surface-container-lowest: #0D1117;
+  --color-surface-container-low: #161B22;
+  --color-surface-container: #1C2128;
+  --color-surface-container-high: #21262D;
+  --color-surface-container-highest: #30363D;
+  --color-on-surface: #E6EDF3;
+  --color-on-surface-variant: #8B949E;
+  --color-inverse-surface: #E6EDF3;
+  --color-inverse-on-surface: #0D1117;
+  --color-outline: #8B949E;
+  --color-outline-variant: #21262D;
+  --color-primary: #00C2FF;
+  --color-primary-container: #0080FF;
+  --color-primary-fixed: #003F52;
+  --color-primary-fixed-dim: #00607A;
+  --color-on-primary: #0D1117;
+  --color-on-primary-container: #E6EDF3;
+  --color-inverse-primary: #0052d1;
+  --color-secondary: #8B949E;
+  --color-secondary-container: #21262D;
+  --color-secondary-fixed: #1C2128;
+  --color-secondary-fixed-dim: #30363D;
+  --color-on-secondary: #0D1117;
+  --color-on-secondary-fixed: #E6EDF3;
+  --color-on-secondary-container: #E6EDF3;
+  --color-tertiary: #3FB950;
+  --color-tertiary-container: #1F4D27;
+  --color-tertiary-fixed: #1A3320;
+  --color-tertiary-fixed-dim: #234B2B;
+  --color-on-tertiary: #0D1117;
+  --color-on-tertiary-fixed: #3FB950;
+  --color-on-tertiary-container: #3FB950;
+  --color-error: #F85149;
+  --color-error-container: #3D0000;
+  --color-on-error: #0D1117;
+  --color-on-error-container: #F85149;
+}
+
+.dark .glass-nav {
+  background: rgba(13, 17, 23, 0.85);
+}
+
+.dark .gradient-button {
+  background: linear-gradient(135deg, #00C2FF 0%, #0080FF 100%);
+}
+
+.landing-title-gradient {
+  background-image: linear-gradient(135deg, #0052d1 0%, #156aff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.dark .landing-title-gradient {
+  background-image: linear-gradient(135deg, #00C2FF 0%, #0080FF 100%);
+}
